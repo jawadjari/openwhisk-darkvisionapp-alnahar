@@ -237,9 +237,9 @@ function analyzeImage(args, fileName, analyzeCallback) {
       fs.createReadStream(fileName).pipe(
         request({
           method: 'POST',
-          //url: 'https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classify' + // eslint-disable-line
-          //  '?api_key=' + args.watsonApiKey +
-         //   '&version=2016-05-20',
+          url: 'https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classify' + // eslint-disable-line
+             '?api_key=' + args.watsonApiKey +
+             '&version=2016-05-20',
           //formData: {'classifier_ids':'["media_416609574"]'},
           parameters: {'classifier_ids':['']},
           headers: {
@@ -250,7 +250,7 @@ function analyzeImage(args, fileName, analyzeCallback) {
           if (err) {
             console.log('Image Keywords', err);
           } else if (body.images && body.images.length > 0) {
-            analysis.image_keywords = body.images[0].classifiers[0].classes;
+            analysis.image_keywords = body.images[0].classifiers[0].classes + body.images[0].classifiers[1].classes;
           }
           callback(null);
         }));
