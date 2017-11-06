@@ -214,6 +214,7 @@ function analyzeImage(args, fileName, analyzeCallback) {
           url: 'https://gateway-a.watsonplatform.net/visual-recognition/api/v3/detect_faces' + // eslint-disable-line
             '?api_key=' + args.watsonApiKey +
             '&version=2016-05-20',
+           parameters: {'classifier_ids':['ddddddd']},
           headers: {
             'Content-Length': fs.statSync(fileName).size
           },
