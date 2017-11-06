@@ -240,7 +240,7 @@ function analyzeImage(args, fileName, analyzeCallback) {
           url: 'https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classify' + // eslint-disable-line
             '?api_key=' + args.watsonApiKey +
             '&version=2016-05-20',
-          parameters: {'classifier_ids':'[\"default\"]'},
+          parameters: {'classifier_ids':'[\"media_416609574\"]'},
           headers: {
             'Content-Length': fs.statSync(fileName).size
           },
