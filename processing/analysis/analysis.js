@@ -237,9 +237,9 @@ function analyzeImage(args, fileName, analyzeCallback) {
       fs.createReadStream(fileName).pipe(
         request({
           method: 'POST',
-          url: 'https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classify' + // eslint-disable-line
-            '?api_key=' + args.watsonApiKey +
-            '&version=2016-05-20',
+          //url: 'https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classify' + // eslint-disable-line
+          //  '?api_key=' + args.watsonApiKey +
+         //   '&version=2016-05-20',
           //formData: {'classifier_ids':'["media_416609574"]'},
           parameters: {'classifier_ids':['']},
           headers: {
