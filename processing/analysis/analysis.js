@@ -242,7 +242,7 @@ function analyzeImage(args, fileName, analyzeCallback) {
              '&version=2016-05-20',
           //formData: {'classifier_ids':'["media_416609574"]'},
           //parameters: {'classifier_ids':['media_416609574']},
-          form: {'classifier_ids': '["media_416609574"]'},
+         // form: {'classifier_ids': '["media_416609574"]'},
           headers: {
             'Content-Length': fs.statSync(fileName).size
           },
