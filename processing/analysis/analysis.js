@@ -238,11 +238,8 @@ function analyzeImage(args, fileName, analyzeCallback) {
         request({
           method: 'POST',
           url: 'https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classify' + // eslint-disable-line
-             '?api_key=e1994a9bc6583ad86928c17da81d449b42025ade' +  //args.watsonApiKey +
+             '?api_key=e1994a9bc6583ad86928c17da81d449b42025ade&classifier_ids=media_416609574' +  //args.watsonApiKey +
              '&version=2016-05-20',
-          //formData: {'classifier_ids':'["media_416609574"]'},
-          //parameters: {'classifier_ids':['media_416609574']},
-          form: {'classifier_ids': '[media_416609574]'},
           headers: {
             'Content-Length': fs.statSync(fileName).size
           },
